@@ -1,0 +1,111 @@
+<div class="modal-header">
+        <button type="button" ng-click="vm.fcSalir()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">
+            Buscar Productos
+        </h4>
+    </div>
+    <div class="modal-body">
+    
+        <form role="form" name="form" autocomplete="off" >
+    
+
+
+
+            <div class="row">
+                    
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="form-group">
+                        <label>Codigo</label>
+                        <input class="form-control" placeholder="Codigo" type="text" >
+                    </div>
+
+                </div>
+
+                        
+                <div class="col-xs-12 col-md-8">
+
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <input class="form-control" placeholder="Nombre del Cliente" type="text" >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <p ng-if="vm.listado_listado.length <= 0" class="text-muted">Sin datos para mostrar.</p>
+                
+                <table ng-if="vm.listado_listado.length > 0" class="table table-condensed table-responsive table-hover">
+                        
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th ></th>
+                        </tr>
+                        
+                        <tbody  ng-repeat="d in vm.listado_listado">
+                            <tr  class="color-tr-table font-table-padron " >
+                                <td>{{d.codigo}}</td>
+                                <td>{{d.descripcion}}</td>
+                                <td style="text-align: right;">
+    
+                                    <button type="button"
+                                            ng-click="vm.fcSeleccionar(d)" 
+                                            class="btn btn-default btn-flat btn-sm"><i class="fa fa-fw fa-edit"></i>
+                                    </button>
+    
+                                </td>
+                            </tr>
+                        </tbody>
+    
+                </table>
+                
+                <div class="page-btn" ng-if="vm.listado_listado.length > 0">
+    
+                    <button type="button" ng-click="vm.fcCambiarDePagina('anterior', 'listado');" ng-disabled="(vm.page_listado == 1) || vm.listado_listado.length == 0" class="btn btn-default  btn-flat">
+                        Anterior
+                    </button>  
+                    
+                    Pag:
+                    <select ng-model="vm.selected_page_listado" 
+                            ng-disabled="vm.listado_listado.length == 0"
+                            ng-change="vm.fcCambiarPaginaSelector('listado')"
+                            ng-options="option.name for option in vm.pages_listado track by option.value">                           
+                    </select>
+                    
+                    de {{vm.total_listado}}
+    
+                    <button type="button" ng-click="vm.fcCambiarDePagina('siguiente', 'listado');" ng-disabled="(vm.page_listado == vm.total_listado) || vm.listado_listado.length == 0" class="btn btn-default  btn-flat">
+                        Siguiente
+                    </button>  
+    
+                </div>
+
+            </div>
+        
+    
+        </form>
+    
+    </div>
+    
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+    
+                <button class="btn btn-success btn-flat" type="button" ng-disabled="!form.$valid"   ng-click="vm.fcGuardar()">
+                        <i class="fa fa-fw fa-search"></i> Buscar
+                </button>
+    
+                <button class="btn btn-default btn-flat" type="button"  ng-click="vm.fcSalir()">
+                    <i class="fa fa-fw fa-sign-out"></i> Cancelar
+                </button>  
+
+            </div> 
+        </div>    
+    </div>

@@ -1,0 +1,17 @@
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    .content-wrapper {
+        display:none;
+    }
+
+    #printSection, #printSection * {
+        display: inline;
+    }
+
+    
+}

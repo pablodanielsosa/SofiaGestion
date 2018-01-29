@@ -1,0 +1,76 @@
+
+
+<div class="login-box" ng-init="vm.fcSetClassView()">
+  <div class="login-logo">
+<div class="img-logo-login"><img class="login-logo-ancho" ng-src="{{vm.CONFIG_APP.URL_LOGO_LOGIN}}"/></div>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    
+      <form  name="form" autocomplete="off">
+
+        <div>
+
+          <p class="login-box-msg">Iniciar sesión</p>
+          
+          <div ng-class="vm.alert.class" ng-if="vm.alert.active" role="alert">{{vm.alert.message}}</div>
+
+            <div class="form-group has-feedback">
+
+              <input type="text" 
+                     class="form-control user"
+                     ng-model="vm.login.user" 
+                     name="user" 
+                     required 
+                     ng-enter="vm.fnEntrar()"
+                     placeholder="Usuario">
+
+              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+            </div>
+
+            <div ng-messages="form.user.$error" ng-if="form.user.$dirty">
+              <p ng-message="required" class="text-danger">El campo usuario es requerido.</p>
+            </div>
+
+
+            <div class="form-group has-feedback">
+              <input 
+                    type="password" 
+                    class="form-control" 
+                    ng-model="vm.login.password"
+                    name="pass" 
+                    required
+                    ng-enter="vm.fnEntrar()"
+                    placeholder="Contraseña">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+            <div ng-messages="form.pass.$error" ng-if="form.pass.$dirty">
+              <p ng-message="required" class="text-danger">El campo contraseña es requerido.</p>
+            </div>
+
+
+
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-xs-12">
+                  <button type="button" ng-disabled="!form.$valid"  ng-click="vm.fnEntrar()" class="btn btn-primary btn-block btn-flat">Entrar</button>
+              </div>
+              <!-- /.col -->
+            </div>
+
+            <div class="version">Versión {{vm.version}}</div>
+
+        </div>
+
+      </form>
+
+
+  </div>
+  <!-- /.login-box-body -->
+  
+</div>
+<!-- /.login-box -->
+
+

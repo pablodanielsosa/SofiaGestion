@@ -1,0 +1,111 @@
+<section class="content-header">
+    <h1>
+        Generar Venta
+    </h1>
+</section>
+<section class="invoice">
+
+    <div class="row">
+        
+        <div class="col-xs-12 col-md-10">
+
+            <!--Campo 1 de busqueda-->
+            <div class="form-group">
+              <label>Codigo</label>
+              <input class="form-control" placeholder="Codigo" ng-model="vm.form.codigo" type="text">
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-2">
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <button type="button" ng-click="vm.fcBuscarProducto()" class="btn btn-default btn-block btn-flat" ng-click="">
+                    <i class="fa fa-fw fa-search"></i>
+                </button> 
+            </div>
+    
+        </div>   
+
+    </div>
+
+
+
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Codigo #</th>             
+              <th>Categoria</th>     
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>898989-56565-66526</td>
+              <td>Jeans</td>
+              <td>Jeans Dama talle L</td>
+              <td><input class="form-control" placeholder="Cantidad"type="text"></td>
+              <td><input class="form-control" placeholder="Cantidad"type="text"></td>
+              <td>
+                  <button type="button"
+                            ng-click="vm.fcEliminarGastos(d)" 
+
+                          class="btn btn-default btn-sm btn-flat"><i class="fa fa-fw fa-trash"></i>
+                  </button>
+
+                    <button type="button"
+                              ng-click="vm.fcCreateOpenModal('controlestadoimpositivo/estadoimpositivo.crear.gasto', 'EDITAR_GASTO', d, 'EstadoImpositivoModalController', null)" 
+
+                            class="btn btn-default btn-sm btn-flat"><i class="fa fa-fw fa-arrow-right"></i>
+                    </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+              <tr>
+                <th>Descuento (10%)</th>
+                <td>$0.00</td>
+              </tr>
+              <tr>
+                <th>Total:</th>
+                <td>$0.00</td>
+              </tr>
+            </tbody></table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- this row will not appear when printing -->
+      <div class="row no-print">
+        <div class="col-xs-12">
+          <a href="invoice-print.html" target="_blank" class="btn btn-default btn-flat"><i class="fa fa-print "></i> Cencelar Venta</a>
+          <button type="button" ng-click="vm.fcGenerarVenta()" class="btn btn-success pull-right btn-flat"><i class="fa fa-credit-card"></i> Generar Venta</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="clearfix"></div>
