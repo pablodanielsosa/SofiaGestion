@@ -63,7 +63,12 @@
                     {id: 1, title: 'Administración', url: 'administracion', etiqueta: 'administracion' , icon: '', active: true,
                      sub_items:[
                          {id: 1, title: 'Productos', url: 'productos' , etiqueta: 'productos' , icon: '', active: true},
-                         {id: 2, title: 'Categorias',  url: 'categorias' , etiqueta: 'categorias' , icon: '', active: true}
+                         {id: 2, title: 'Categorias',  url: 'categorias' , etiqueta: 'categorias' , icon: '', active: true},
+                         {id: 3, title: 'Proveedores',  url: 'proveedores' , etiqueta: 'proveedores' , icon: '', active: true},
+                         {id: 4, title: 'Usuarios',  url: 'usuarios' , etiqueta: 'usuarios' , icon: '', active: true},
+                         {id: 5, title: 'Marcas',  url: 'marcas' , etiqueta: 'marcas' , icon: '', active: true},
+                         {id: 6, title: 'Roles',  url: 'roles' , etiqueta: 'roles' , icon: '', active: true},
+                         {id: 7, title: 'Logs',  url: 'logs' , etiqueta: 'logs' , icon: '', active: true}
                     ]}
                 ]
             }//fin items

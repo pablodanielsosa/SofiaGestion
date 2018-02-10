@@ -141,10 +141,35 @@
     <script src="app/categorias/categorias.controller.js?v=<?php echo uniqid(); ?>"></script>
     <script src="app/categorias/categorias.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
 
+    <!--proveedores-->
+    <script src="app/proveedores/proveedores.route.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/proveedores/proveedores.controller.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/proveedores/proveedores.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
+
+    <!--usuarios-->
+    <script src="app/usuarios/usuarios.route.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/usuarios/usuarios.controller.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/usuarios/usuarios.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
+
+    <!--marcas-->
+    <script src="app/marcas/marcas.route.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/marcas/marcas.controller.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/marcas/marcas.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
+
     <!--venta-->
     <script src="app/venta/venta.route.js?v=<?php echo uniqid(); ?>"></script>
     <script src="app/venta/venta.controller.js?v=<?php echo uniqid(); ?>"></script>
     <script src="app/venta/venta.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
+
+    <!--roles-->
+    <script src="app/roles/roles.route.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/roles/roles.controller.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/roles/roles.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
+
+    <!--logs-->
+    <script src="app/logs/logs.route.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/logs/logs.controller.js?v=<?php echo uniqid(); ?>"></script>
+    <script src="app/logs/logs.modal.controller.js?v=<?php echo uniqid(); ?>"></script>
 
    
     <script>

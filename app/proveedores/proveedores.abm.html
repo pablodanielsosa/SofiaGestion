@@ -1,0 +1,74 @@
+<div class="modal-header">
+    <button type="button" ng-click="vm.fcSalir()" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span></button>
+    <h4 class="modal-title">
+        {{vm.titulo}}
+    </h4>
+</div>
+<div class="modal-body">
+
+    <form role="form" name="form" autocomplete="off" >
+
+
+       <div class="row">
+
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label>Nombre</label> 
+                    <input class="form-control" capitalize ng-required="true" name="nombre" placeholder="nombre" ng-model="vm.form.nombre" type="text">
+                    <div ng-messages="form.nombre.$error">
+                        <p ng-message="required" class="text-danger">El campo es requerido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label>Número Contacto</label> 
+                    <input class="form-control" capitalize ng-required="true" name="numero_contacto" placeholder="numero contacto" ng-model="vm.form.numero_contacto" type="text">
+                    <div ng-messages="form.numero_contacto.$error">
+                        <p ng-message="required" class="text-danger">El campo es requerido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label>Email</label> 
+                    <input class="form-control" capitalize ng-required="true" name="email" placeholder="email" ng-model="vm.form.email" type="text">
+                    <div ng-messages="form.numero_contacto.$error">
+                        <p ng-message="required" class="text-danger">El campo es requerido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                    <label>Direccion</label> 
+                    <input class="form-control" capitalize ng-required="true" name="direccion" placeholder="direccion" ng-model="vm.form.direccion" type="text">
+                    <div ng-messages="form.direccion.$error">
+                        <p ng-message="required" class="text-danger">El campo es requerido.</p>
+                    </div>
+                </div>
+            </div>
+
+       </div>
+
+    </form>
+
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+
+            <button class="btn btn-success btn-flat" type="button" ng-disabled="!form.$valid"   ng-click="vm.fcGuardar()">
+                <i class="fa fa-fw fa-save"></i> Guardar
+            </button>
+
+            <button class="btn btn-default btn-flat" type="button"  ng-click="vm.fcSalir()">
+                <i class="fa fa-fw fa-sign-out"></i> Cancelar
+            </button>  
+        </div> 
+    </div>    
+</div>
